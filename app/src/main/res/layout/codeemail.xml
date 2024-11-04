@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dirtywhite"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inpcode"
+        android:layout_width="60mm"
+        android:layout_height="match_parent"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Input the 4-digit code sent to your email"
+        android:layout_marginBottom="90dp"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/less_than"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backtofpass"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/email__1_"/>
+
+        <TextView
+            android:id="@id/almost"
+            android:layout_width="10in"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Almost There!!"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+
+            />
+
+        <Button
+            android:id="@+id/nextbut"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/next"
+            android:layout_marginBottom="10"
+            android:textColor="@color/white" />

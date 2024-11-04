@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">UCanpay</string>
+    <string name="i_d_number">I.D. Number</string>
+    <string name="return_to_home">Return to Home</string>
+    <string name="next">NEXT</string>
 </resources>
