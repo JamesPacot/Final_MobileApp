@@ -6,11 +6,7 @@ import android.util.Log
 import android.graphics.Bitmap
 import android.widget.Button
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.ucanpay.databinding.ActivityHomepageBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
@@ -47,10 +43,12 @@ class Homepage : AppCompatActivity() {
 
     private fun generateQRCode(value: String) {
         try {
+            Log.d("QRCode", "Generate QR Code : $value")
             val barcodeEncoder = BarcodeEncoder()
-            val bitmap: Bitmap = barcodeEncoder.encodeBitmap(value, BarcodeFormat.QR_CODE, 400,400)
+            val bitmap: Bitmap = barcodeEncoder.encodeBitmap(value, BarcodeFormat.QR_CODE, 100,100)
             imageqrcode.setImageBitmap(bitmap)
          } catch (e: WriterException) {
+             Log.e("QRCodeError", "Error Generating QR Code", e)
             e.printStackTrace()
             }
         }

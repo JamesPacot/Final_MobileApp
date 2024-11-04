@@ -24,13 +24,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         usernameInput = findViewById(R.id.user_input)
-        passwordInput = findViewById(R.id.user_input)
+        passwordInput = findViewById(R.id.password_input)
         loginBtn = findViewById(R.id.login_btn)
 
         loginBtn.setOnClickListener {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
             Log.i( "Test Credentials", "Username : $username and Password : $password")
+
+            val intent =Intent(this, Homepage::class.java)
+            startActivity(intent)
 
         }
 

@@ -1,5 +1,5 @@
 [versions]
-agp = "8.7.1"
+agp = "8.7.2"
 kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -21,7 +21,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 qr-generator = { group = "com.journeyapps", name = "zxing-android-embedded", version.ref = "qrGenerator" }
-
+zxing = { group = "com.google.zxing", name = "core", version = "3.4.1" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
