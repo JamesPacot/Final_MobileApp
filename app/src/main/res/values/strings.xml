@@ -3,4 +3,7 @@
     <string name="i_d_number">I.D. Number</string>
     <string name="return_to_home">Return to Home</string>
     <string name="next">NEXT</string>
+    <string name="image_description">Description of the image</string>
+    <string name="email_image_description">Description for email image</string>
+
 </resources>

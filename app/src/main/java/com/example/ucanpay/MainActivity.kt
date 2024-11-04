@@ -37,28 +37,26 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        // Set up the window insets listener
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Set up the Forgot Password TextView click listener
-        val forgotPasswordTextView: TextView = findViewById(R.id.forgot_password)
-        forgotPasswordTextView.setOnClickListener {
-            // Handle the "Forgot password?" click action here
-            // For example, navigate to a password recovery screen
-
-
         val homepageactbutton = findViewById<Button>(R.id.login_btn)
             homepageactbutton.setOnClickListener {
-                val Intent = Intent( this,Homepage::class.java)
-                startActivity(Intent)
+                val intent = Intent( this,Homepage::class.java)
+                startActivity(intent)
             }
+
+        val forgotPasswordText = findViewById<TextView>(R.id.forgot_password)
+        forgotPasswordText.setOnClickListener {
+            val intent = Intent (this, fpass::class.java)
+            startActivity(intent)
+        }
 
 
         }
     }
-}
+
 

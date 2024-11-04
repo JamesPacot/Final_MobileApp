@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    >
 
     <RelativeLayout
         android:id="@+id/newp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom=""
-        android:background="@color/dirtywhite"
+        android:layout_marginBottom="100dp"
         android:gravity="center"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,72 +20,68 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".MainActivity">
 
-        <LinearLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="100"
-            android:gravity="center"
-            android:orientation="vertical">
 
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/less_than"
+            android:src="@drawable/less_than"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/backtofpass"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_marginTop="-50dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Create New Password"
-                android:textSize="25sp"
-            <ImageView
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:src="@drawable/padlock" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/newPass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="43dp"
-                android:background="@drawable/corner"
-                android:hint="New Password"
-                android:inputType="numberPassword"
-                android:padding="18dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="-50dp"
+                    android:textColor="@color/white"
+                    android:text="Create New Password"
+                    android:textSize="25sp"/>
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/padlock" />
 
-            <EditText
-                android:id="@+id/confpass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/corner"
-                android:hint="Confirm Password"
-                android:inputType="numberPassword"
-                android:padding="18dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/newPass"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="43dp"
+                    android:background="@drawable/corner"
+                    android:hint="New Password"
+                    android:inputType="numberPassword"
+                    android:padding="18dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/nextbut"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/black"
-                android:text="@string/next"
-                android:textColor="@color/white" />
+                <EditText
+                    android:id="@+id/confpass"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/corner"
+                    android:hint="Confirm Password"
+                    android:inputType="numberPassword"
+                    android:padding="18dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/newlogin_pass"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:text="Login"
+                    android:layout_marginTop="32dp"
+                    android:textColor="#086B45" />
 
 
         </LinearLayout>

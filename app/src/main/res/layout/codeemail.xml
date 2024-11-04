@@ -1,62 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dirtywhite"
+    android:background="@drawable/login_bg"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/inpcode"
-        android:layout_width="60mm"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="Input the 4-digit code sent to your email"
-        android:layout_marginBottom="90dp"
-        android:textColor="@android:color/black"
-        android:textSize="20dp" />
+        android:text="4-digit code sent to your email"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/less_than"
+        android:contentDescription="@string/image_description"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/backtofpass"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/email__1_"/>
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/email__1_"
+            android:contentDescription="@string/email_image_description"
+            />
 
-        <TextView
-            android:id="@id/almost"
-            android:layout_width="10in"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="90dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center"
-            android:text="Almost There!!"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/enter_code"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginBottom="100dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
             android:gravity="center"
             android:inputType="number"
+            android:hint="Enter Code"
+            android:textColorHint="@color/white"
 
             />
 
@@ -64,7 +60,9 @@
             android:id="@+id/nextbut"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/white"
             android:text="@string/next"
-            android:layout_marginBottom="10"
-            android:textColor="@color/white" />
+            android:textColor="#086B45" />
+    </LinearLayout>
+
+</RelativeLayout>

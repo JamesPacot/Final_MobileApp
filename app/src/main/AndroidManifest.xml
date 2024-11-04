@@ -14,9 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UCanpay"
         tools:targetApi="31">
+
+        <activity android:name=".verification"/>
         <activity
             android:name=".Homepage"
-            android:exported="false" />
+            android:exported="false"
+
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">
