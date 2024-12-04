@@ -10,44 +10,35 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.google.zxing.qrcode.QRCodeWriter
 
+class Pointpay : AppCompatActivity() {
 
-
-class Homepage : AppCompatActivity() {
-
-    private lateinit var imageqrcode: ImageView
-    private lateinit var Ettext: EditText
-    private lateinit var generateQrBtn: Button
-    private lateinit var starpoints: ImageView
-
+    private lateinit var imageqrcode2: ImageView
+    private lateinit var text2: EditText
+    private lateinit var generateQrBtn2: Button
+    private lateinit var backbutton: Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homepage)
+        setContentView(R.layout.activity_pointpay)
 
-        imageqrcode = findViewById(R.id.imageqrcode)
-        Ettext = findViewById(R.id.Ettext)
-        generateQrBtn = findViewById(R.id.generateQrBtn)
-        starpoints = findViewById(R.id.star_points)
+        text2 = findViewById(R.id.text2)
+        generateQrBtn2 = findViewById(R.id.generateQrBtn2)
+        backbutton = findViewById(R.id.backbtn)
+        imageqrcode2 = findViewById(R.id.imageqrcode2)
 
-        starpoints.setOnClickListener{
-            val intent = Intent (this, Pointpay::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val qrGeneratorButton: Button = findViewById(R.id.generateQrBtn)
-        val logoutButton: Button = findViewById(R.id.logout_btn)
-        imageqrcode = findViewById(R.id.imageqrcode)
 
 
         //QR Code
-        qrGeneratorButton.setOnClickListener {
+        generateQrBtn2.setOnClickListener {
 
-            val data = Ettext.text.toString().trim()
+            val data = text2.text.toString().trim()
 
             if (data.isEmpty()) {
                 Toast.makeText(this, "Please enter some data", Toast.LENGTH_SHORT).show()
@@ -66,7 +57,7 @@ class Homepage : AppCompatActivity() {
                         }
                     }
 
-                    imageqrcode.setImageBitmap(bmp)
+                    imageqrcode2.setImageBitmap(bmp)
                 } catch (e: WriterException) {
                     e.printStackTrace()
                 }
@@ -75,16 +66,12 @@ class Homepage : AppCompatActivity() {
 
         }
 
-        //Logout
-        logoutButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        //Back
+        backbutton.setOnClickListener {
+            val intent = Intent(this, Homepage::class.java)
             startActivity(intent)
             finish()
         }
 
     }
-
 }
-
-
-

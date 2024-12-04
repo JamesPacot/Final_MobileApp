@@ -27,10 +27,14 @@
         />
 
     <LinearLayout
+        android:id="@+id/code_back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        >
 
         <ImageView
             android:layout_width="130dp"

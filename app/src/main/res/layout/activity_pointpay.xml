@@ -2,38 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main2"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homepage_bg"
-    tools:context=".MainActivity">
+    tools:context=".Pointpay">
 
     <ImageView
-        android:id="@+id/imageqrcode"
+        android:id="@+id/imageqrcode2"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/nobg"
-        android:layout_marginTop="230sp"
+        android:layout_marginTop="230dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-
-    <ImageView
-        android:id="@+id/star_points"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/star"
-        android:layout_margin="16dp"
-        android:contentDescription="starpoints"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
     <EditText
-        android:id="@+id/Ettext"
+        android:id="@+id/text2"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -42,7 +29,7 @@
         android:paddingStart="15dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/imageqrcode"
+        app:layout_constraintTop_toBottomOf="@id/imageqrcode2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -52,14 +39,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/imageqrcode"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
         <Button
-            android:id="@+id/generateQrBtn"
+            android:id="@+id/generateQrBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -69,16 +55,26 @@
             android:layout_marginTop="10dp"
             />
 
-
         <Button
-            android:id="@+id/logout_btn"
+            android:id="@+id/backbtn"
             android:layout_width="116dp"
             android:layout_height="52dp"
             android:backgroundTint="@color/white"
-            android:text="Logout"
+            android:text="Back"
             android:textColor="#086B45"
-            android:layout_marginTop="10dp"
-            />
+            android:layout_marginTop="10dp"/>
+
+
     </LinearLayout>
+
+
+
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

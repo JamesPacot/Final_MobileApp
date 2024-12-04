@@ -29,16 +29,20 @@
             android:src="@drawable/less_than"/>
 
             <LinearLayout
+                android:id="@+id/npass_back"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                >
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginTop="-50dp"
+                    android:layout_marginTop="100dp"
                     android:textColor="@color/white"
                     android:text="Create New Password"
                     android:textSize="25sp"/>
@@ -50,7 +54,7 @@
 
                 <EditText
                     android:id="@+id/newPass"
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="43dp"
                     android:background="@drawable/corner"
@@ -63,7 +67,7 @@
 
                 <EditText
                     android:id="@+id/confpass"
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/corner"
