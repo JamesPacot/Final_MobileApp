@@ -81,4 +81,24 @@
             />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/cash_in_butt"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
+        android:text="Cash In"
+        android:textColor="#086B45"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="550dp" />
+
+    <Button
+        android:id="@+id/transac"
+        android:layout_width="143dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/white"
+        android:text="Transaction History"
+        android:textColor="#086B45"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
